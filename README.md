@@ -7,6 +7,7 @@ and number of tasks marked incomplete.
 TO RUN THIS PROGRAM:
 Install a program called XAMPP.
 After running it, start the apache server.
-Download the files for my task program and place them in a folder in c:/xampp/htdocs
-then in your web browser type in localhost/folder_name
+Download the repository to c:/xampp/htdocs
+extract the files there.
+then in your web browser type in localhost/myTaskList-master
 It should then run properly
