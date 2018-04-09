@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--
+# file name : index.html
+# Created by: David Joerres
+# Created on: 4/7/2018
+-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task List</title>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+
+    <!-- JQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Library's for canvas.js which makes the bar graph -->
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
+
+    <!-- Link to Pages JS -->
+    <script type="text/javascript" src = "myScript.js"></script>
+    
+</head>
+
+<body>
+    <div class = "page-container">
+        <div class="header" >
+            <h1>My Task List</h1>
+            
+            <!-- Table that holds the stats regarding total number of tasks and how many are checked -->
+            <table id = 'statTable' style="float: left;"">
+                <tr>
+                    <th>Number Of Tasks: </th>
+                    <td id = 'numTasks'></td>
+                </tr>
+                <tr>
+                    <th>Completed Tasks: </th>
+                    <td id = 'completedTasks'></td>
+                </tr>
+                <tr>
+                    <th>Incomplete Tasks: </th>
+                    <td id = 'incompleteTasks'></td>
+                </tr>
+            </table>
+
+            <!-- Bar graph created using canvasJS -->
+            <div id="chartContainer" style="float: right; width: 48%; height: 140px"></div>
+
+            <!-- Input field to type in new tasks and add button to add a new task -->
+            <input type="text" name="newTask" id = "newTaskInput" value = "" placeholder="Task...">
+            <button type = "submit" id = 'addTaskBtn' class="addBtn">Add</button>
+        </div>
+
+        <!-- unordered list used to create the list of tasks. All data is appended via javascript -->
+        <ul id="myUL" class = "taskList">
+          
+        </ul>
+    </div>
+</body>
+</html>
